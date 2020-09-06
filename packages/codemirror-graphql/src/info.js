@@ -18,7 +18,7 @@ import {
   getEnumValueReference,
   getFieldReference,
   getTypeReference,
-} from './utils/SchemaReference';
+} from './utils/SchemaReference.esm';
 import './utils/info-addon';
 
 /**
@@ -189,7 +189,7 @@ function text(into, content, className, options = { onClick: null }, ref) {
       // Providing a href forces proper a tag behavior, though we don't actually
       // want clicking the node to navigate anywhere.
       node.href = 'javascript:void 0'; // eslint-disable-line no-script-url
-      node.addEventListener('click', (e: MouseEvent) => {
+      node.addEventListener('click', e => {
         onClick(ref, e);
       });
     } else {
